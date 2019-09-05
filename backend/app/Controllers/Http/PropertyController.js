@@ -34,9 +34,9 @@ class PropertyController {
       'longitude',
       'price'
     ])
-
+  
     const property = await Property.create({ ...data, user_id: id })
-
+  
     return property
   }
 
@@ -62,9 +62,9 @@ class PropertyController {
     const data = request.only([
       'title',
       'address',
+      'price',
       'latitude',
-      'longitude',
-      'price'
+      'longitude'
     ])
 
     property.merge(data)
